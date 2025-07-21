@@ -1,0 +1,152 @@
+:root {
+    --bg: #f7f9fc;
+    --container: #fff;
+    --text: #333;
+    --input-bg: #fff;
+    --task-bg: #f0f0f0;
+    --completed-text: #888;
+    --button-bg: #0077cc;
+    --button-hover: #005fa3;
+  }
+  
+  body.dark {
+    --bg: #121212;
+    --container: #1e1e1e;
+    --text: #e0e0e0;
+    --input-bg: #2a2a2a;
+    --task-bg: #2d2d2d;
+    --completed-text: #777;
+    --button-bg: #2196f3;
+    --button-hover: #1976d2;
+  }
+  
+  body {
+    background-color: var(--bg);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+    transition: background-color 0.3s ease;
+  }
+  
+  .container {
+    background: var(--container);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 550px;
+    transition: background 0.3s ease;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .input-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    background: var(--input-bg);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  
+  #add-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #add-btn:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+  }
+  
+  .filter-btn.active {
+    background-color: #cce0ff;
+    color: #0077cc;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    background-color: var(--task-bg);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease;
+  }
+  
+  li.completed span.task-text {
+    text-decoration: line-through;
+    color: var(--completed-text);
+  }
+  
+  .task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+  }
+  
+  .edit-btn, .delete-btn, .complete-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text);
+  }
+  
+  .task-meta {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top:0.3rem;
+   }
