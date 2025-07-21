@@ -38,7 +38,7 @@ To-Do Lists/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/realworld-todo.git
+   git clone https://github.com/codepodium/To-Do-List.git
    cd To-Do List
 Open index.html in your browser
 
